@@ -74,8 +74,11 @@
     <Compile Include="PrintWindow.xaml.vb">
       <DependentUpon>PrintWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="resources\learn\LearnCaesarPage.xaml.vb">
-      <DependentUpon>LearnCaesarPage.xaml</DependentUpon>
+    <Compile Include="resources\explore\ExploreCaesarWindow.xaml.vb">
+      <DependentUpon>ExploreCaesarWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="resources\learn\LearnCaesarWindow.xaml.vb">
+      <DependentUpon>LearnCaesarWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="ExploreWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -105,7 +108,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="resources\learn\LearnCaesarPage.xaml">
+    <Page Include="resources\explore\ExploreCaesarWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="resources\learn\LearnCaesarWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

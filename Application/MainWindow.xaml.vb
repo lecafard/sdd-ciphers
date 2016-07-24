@@ -1,5 +1,6 @@
 ﻿Class MainWindow
     Dim learnWindow As LearnWindow = New LearnWindow()
+    Dim exploreWindow As ExploreWindow = New ExploreWindow()
     Dim printWindow As PrintWindow = New PrintWindow()
 
     Dim originalButtonText As String
@@ -32,5 +33,13 @@
         End If
         printWindow.Show()
         printWindow.Activate()
+    End Sub
+
+    Private Sub btnExplore_Click(sender As Object, e As RoutedEventArgs) Handles btnExplore.Click
+        If exploreWindow.isClosed Then
+            exploreWindow = New ExploreWindow()
+        End If
+        exploreWindow.Show()
+        exploreWindow.Activate()
     End Sub
 End Class

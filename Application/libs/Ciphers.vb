@@ -17,7 +17,11 @@ Module Ciphers
                 End If
                 out(outIndex) = Chr(outValue)
                 outIndex = outIndex + 1
+            Else
+                out(outIndex) = c
+                outIndex = outIndex + 1
             End If
+
         Next
         Return out
     End Function
@@ -34,6 +38,9 @@ Module Ciphers
                     outValue += 26
                 End If
                 out(outIndex) = Chr(outValue)
+                outIndex = outIndex + 1
+            Else
+                out(outIndex) = c
                 outIndex = outIndex + 1
             End If
         Next
@@ -71,5 +78,9 @@ Module Ciphers
 
     Function CaesarDecrypt(message As String, shift As Integer) As String
         Return CaesarEncrypt(message, -shift)
+    End Function
+
+    Function Capitalize(message As String) As String
+        Return UCase(message)
     End Function
 End Module

@@ -8,7 +8,7 @@
         WindowState="Maximized"
         WindowStyle="None"
         Title="MainWindow" Height="720" Width="1280">
-    <Grid Background="#FF2C3E50">
+    <Grid Background="#FF070707">
         <Grid Height="702" HorizontalAlignment="Left" VerticalAlignment="Center" Width="358" Margin="56,0,0,10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="407*"/>
