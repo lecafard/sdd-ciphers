@@ -77,6 +77,9 @@
     <Compile Include="resources\explore\ExploreCaesarWindow.xaml.vb">
       <DependentUpon>ExploreCaesarWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="resources\learn\LearnVignereWindow.xaml.vb">
+      <DependentUpon>LearnVignereWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="resources\learn\LearnCaesarWindow.xaml.vb">
       <DependentUpon>LearnCaesarWindow.xaml</DependentUpon>
     </Compile>
@@ -109,6 +112,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="resources\explore\ExploreCaesarWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="resources\learn\LearnVignereWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -164,9 +171,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <AppDesigner Include="My Project\" />
+    <None Include="resources\printouts\caesar.pdf" />
+    <None Include="resources\printouts\vignere.pdf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\img\caesar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="resources\videos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
