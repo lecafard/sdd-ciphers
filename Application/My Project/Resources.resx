@@ -121,6 +121,9 @@
   <data name="caesar_print" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\printouts\caesar.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="transposition_print" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\printouts\transposition.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="vignere_print" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\printouts\vignere.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

@@ -26,22 +26,44 @@ Module Ciphers
         Return out
     End Function
 
-    Function VignereRound(message As String, shift As Integer, direction As Integer) As String
+    Function VignereRound(message As String, keyStr As String, direction As Integer) As String
         message = UCase(message)
+        Dim keyLength = Len(keyStr)
+        Dim keyIndex = 0
+        Dim key(keyLength) As Integer
         Dim out(Len(message)) As Char
         Dim outIndex = 0
+
+        Dim count = 0
+        For Each c As Char In keyStr
+            key(count) = Asc(c) - CapitalA
+            count += 1
+        Next
+
         For Each c As Char In message
             Dim ascVal = Asc(c)
             If ascVal >= CapitalA And ascVal <= CapitalZ Then
-                Dim outValue = ((ascVal - CapitalA) + shift + outIndex * direction) Mod 26 + CapitalA
-                If outValue < CapitalA Then
-                    outValue += 26
+                Dim tmpOut
+                If direction = 1 Then
+                    tmpOut = ((Asc(message(outIndex)) - CapitalA + key(keyIndex)) Mod 26) + CapitalA
+                Else
+                    tmpOut = ((Asc(message(outIndex)) - CapitalA - key(keyIndex)) Mod 26) + CapitalA
                 End If
-                out(outIndex) = Chr(outValue)
-                outIndex = outIndex + 1
+
+                If tmpOut < CapitalA Then
+                    tmpOut += 26
+                End If
+
+                out(outIndex) = Chr(tmpOut)
+
+                keyIndex += 1
+                If keyIndex = keyLength Then
+                    keyIndex = 0
+                End If
+                outIndex += 1
             Else
                 out(outIndex) = c
-                outIndex = outIndex + 1
+                outIndex += 1
             End If
         Next
         Return out
@@ -68,12 +90,12 @@ Module Ciphers
         Return out
     End Function
 
-    Function VignereEncrypt(message As String, shift As Integer) As String
-        Return VignereRound(message, shift, 1)
+    Function VignereEncrypt(message As String, key As String) As String
+        Return VignereRound(message, key, 1)
     End Function
 
-    Function VignereDecrypt(message As String, shift As Integer) As String
-        Return VignereRound(message, -shift, -1)
+    Function VignereDecrypt(message As String, key As String) As String
+        Return VignereRound(message, key, -1)
     End Function
 
     Function CaesarDecrypt(message As String, shift As Integer) As String

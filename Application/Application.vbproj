@@ -74,6 +74,9 @@
     <Compile Include="PrintWindow.xaml.vb">
       <DependentUpon>PrintWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="resources\explore\ExploreVignereWindow.xaml.vb">
+      <DependentUpon>ExploreVignereWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="resources\explore\ExploreCaesarWindow.xaml.vb">
       <DependentUpon>ExploreCaesarWindow.xaml</DependentUpon>
     </Compile>
@@ -110,6 +113,10 @@
     <Page Include="PrintWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\explore\ExploreVignereWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="resources\explore\ExploreCaesarWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -172,6 +179,7 @@
     </None>
     <AppDesigner Include="My Project\" />
     <None Include="resources\printouts\caesar.pdf" />
+    <None Include="resources\printouts\transposition.pdf" />
     <None Include="resources\printouts\vignere.pdf" />
   </ItemGroup>
   <ItemGroup>

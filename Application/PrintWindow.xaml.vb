@@ -47,7 +47,18 @@ Public Class PrintWindow
             LastPrintTime = Date.UtcNow
         Else
             ' warn
+            oldBrush = btnVignere.Background
+            btnVignere.Background = (New BrushConverter().ConvertFrom("#FFFF0000"))
+            warningTimer = New System.Windows.Threading.DispatcherTimer()
+            warningTimer.Interval = New TimeSpan(0, 0, 0, 0, 250)
+            AddHandler warningTimer.Tick, AddressOf btnVignere_Tick
+            warningTimer.Start()
         End If
+    End Sub
+
+    Private Sub btnVignere_Tick()
+        btnVignere.Background = oldBrush
+        warningTimer.Stop()
     End Sub
 
     Private Sub PrintFile(ByVal filename As String)
@@ -64,5 +75,24 @@ Public Class PrintWindow
         My.Computer.FileSystem.WriteAllBytes(FilePath, FByte, True)
     End Sub
 
+    Private Sub btnTransposition_Click(sender As Object, e As RoutedEventArgs) Handles btnTransposition.Click
+        If (DateTime.UtcNow - LastPrintTime).TotalMilliseconds > PRINT_DELAY Then
+            SaveFile(My.Resources.transposition_print, Directory.GetCurrentDirectory() + "\transposition_print.pdf")
+            PrintFile("\transposition_print.pdf")
+            LastPrintTime = Date.UtcNow
+        Else
+            ' warn
+            oldBrush = btnTransposition.Background
+            btnTransposition.Background = (New BrushConverter().ConvertFrom("#FFFF0000"))
+            warningTimer = New System.Windows.Threading.DispatcherTimer()
+            warningTimer.Interval = New TimeSpan(0, 0, 0, 0, 250)
+            AddHandler warningTimer.Tick, AddressOf btnTransposition_Tick
+            warningTimer.Start()
+        End If
+    End Sub
 
+    Private Sub btnTransposition_Tick()
+        btnTransposition.Background = oldBrush
+        warningTimer.Stop()
+    End Sub
 End Class

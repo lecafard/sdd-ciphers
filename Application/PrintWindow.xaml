@@ -9,17 +9,20 @@
         WindowStyle="None"
         Title="MainWindow" Height="720" Width="1280">
     <Grid Background="#FF070707">
-        <Grid Height="702" HorizontalAlignment="Left" VerticalAlignment="Center" Width="358" Margin="56,0,0,10">
+        <Grid Height="702" HorizontalAlignment="Center" VerticalAlignment="Center" Width="1272" Margin="0,0,0,10">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="407*"/>
-                <ColumnDefinition Width="19*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="0*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="btnCaesar" Focusable="False" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Content="Caesar Cipher&#xD;&#xA;Wheel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="358" Height="120" Background="#FF1ABC9C" Foreground="White" FontSize="34.667" FontFamily="Courier New" Margin="0,50,0,0" Grid.ColumnSpan="2"/>
-            <Button x:Name="btnTransposition"  Focusable="False" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Content="Transposition&#xD;&#xA;Table" HorizontalAlignment="Left" VerticalAlignment="Top" Width="358" Height="120" Background="#FF1ABC9C" Foreground="White" FontSize="34.667" FontFamily="Courier New" Margin="0,443,0,0" Grid.ColumnSpan="2"/>
-            <Button x:Name="btnVignere" Focusable="False"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Content="Vignere&#xD;&#xA;Square" HorizontalAlignment="Left" VerticalAlignment="Top" Width="358" Height="120" Background="#FF1ABC9C" Foreground="White" FontSize="34.667" FontFamily="Courier New" Margin="0,247,0,0" Grid.ColumnSpan="2"/>
+            <Button x:Name="btnCaesar" Focusable="False" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Content="CAESAR CIPHER&#xD;&#xA;WHEEL" HorizontalAlignment="Left" VerticalAlignment="Top" Width="358" Height="120" Background="#FF1ABC9C" Foreground="White" FontSize="34.667" FontFamily="Courier New" Margin="0,50,0,0" FontWeight="Bold"/>
+            <Button x:Name="btnTransposition"  Focusable="False" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Content="TRANSPOSITION&#xD;&#xA;WORKSHEET" HorizontalAlignment="Left" VerticalAlignment="Top" Width="358" Height="120" Background="#FF1ABC9C" Foreground="White" FontSize="34.667" FontFamily="Courier New" Margin="0,443,0,0" FontWeight="Bold"/>
+            <Button x:Name="btnVignere" Focusable="False"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Content="VIGNERE&#xD;&#xA;SQUARE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="358" Height="120" Background="#FF1ABC9C" Foreground="White" FontSize="34.667" FontFamily="Courier New" Margin="0,247,0,0" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Right" Height="120" Margin="0,247,0,0" TextWrapping="Wrap" Text="A SQUARE WHICH CONTAINS 26 ALPHABETS, EACH SHIFTED ACROSS ONE PLACE BY THE ROW ABOVE IT." VerticalAlignment="Top" Width="889" Background="#FF0E0E0E" FontFamily="Courier New" FontSize="29.333" Foreground="Lime"/>
+            <TextBlock HorizontalAlignment="Right" Height="120" Margin="0,443,0,0" TextWrapping="Wrap" Text="SOME RANDOM WORKSHEET THAT WAS FOUND ON THE INTERWEBS." VerticalAlignment="Top" Width="889" Background="#FF0E0E0E" FontFamily="Courier New" FontSize="29.333" Foreground="Lime"/>
+            <TextBlock HorizontalAlignment="Right" Height="120" Margin="0,50,0,0" TextWrapping="Wrap" Text="TWO WHEELS WITH THE ALL THE LETTERS FROM A TO Z. THIS ALLOWS YOU TO MAKE YOUR VERY OWN CIPHER WHEEL TO PLAY WITH." VerticalAlignment="Top" Width="889" Background="#FF0E0E0E" FontFamily="Courier New" FontSize="29.333" Foreground="Lime"/>
         </Grid>
-        <Button x:Name="btnBack" Content="Back"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Height="90" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="248" Background="#FFEE4545" Foreground="White" FontSize="34.667" FontFamily="Courier New"/>
-        <Label x:Name="label" Content="Print" HorizontalAlignment="Center" Height="140" Margin="447,0,399,572" VerticalAlignment="Top" Width="426" FontFamily="Courier New" FontSize="96" FontWeight="Bold" Foreground="White"/>
+        <Button x:Name="btnBack" Content="BACK"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Height="90" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="248" Background="#FFEE4545" Foreground="White" FontSize="34.667" FontFamily="Courier New" FontWeight="Bold"/>
+        <Label x:Name="label" Content="PRINTOUTS" HorizontalAlignment="Center" Height="140" Margin="365,0,375,0" VerticalAlignment="Top" Width="532" FontFamily="Courier New" FontSize="96" FontWeight="Bold" Foreground="White"/>
 
     </Grid>
 </Window>

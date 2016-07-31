@@ -73,6 +73,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Byte[].
         '''</summary>
+        Friend ReadOnly Property transposition_print() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("transposition_print", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
         Friend ReadOnly Property vignere_print() As Byte()
             Get
                 Dim obj As Object = ResourceManager.GetObject("vignere_print", resourceCulture)
