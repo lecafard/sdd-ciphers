@@ -8,6 +8,7 @@ Public Class ExploreCaesarWindow
     Dim currentIndex As Integer
     Dim result As String
     Dim current
+    Dim decodeMode = False
 
     Private Sub btnPlus_Click(sender As Object, e As RoutedEventArgs) Handles btnPlus.Click
         shiftLength.Text = shiftLength.Text + 1
@@ -24,7 +25,11 @@ Public Class ExploreCaesarWindow
     End Sub
 
     Private Sub btnEncode_Click(sender As Object, e As RoutedEventArgs) Handles btnEncode.Click
-        result = Ciphers.CaesarEncrypt(txtPlain.Text, shiftLength.Text)
+        If decodeMode Then
+            result = Ciphers.CaesarEncrypt(txtPlain.Text, shiftLength.Text)
+        Else
+            result = Ciphers.CaesarDecrypt(txtPlain.Text, shiftLength.Text)
+        End If
         current = Ciphers.Capitalize(txtPlain.Text).ToCharArray()
 
         result = result.Substring(0, result.Length - 1)
@@ -60,5 +65,19 @@ Public Class ExploreCaesarWindow
     Private Sub btnBack_Click(sender As Object, e As RoutedEventArgs) Handles btnBack.Click
         isClosed = True
         Me.Close()
+    End Sub
+
+
+    Private Sub btnDecodeMode_Click(sender As Object, e As RoutedEventArgs) Handles btnDecodeMode.Click
+        If decodeMode = False Then
+            decodeMode = True
+            btnEncode.Content = "DECODE"
+            btnDecodeMode.Background = (New BrushConverter().ConvertFrom("#FF00FFFF"))
+        Else
+            decodeMode = False
+            btnEncode.Content = "ENCODE"
+            btnDecodeMode.Background = (New BrushConverter().ConvertFrom("#FF000000"))
+
+        End If
     End Sub
 End Class
