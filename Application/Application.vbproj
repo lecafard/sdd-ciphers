@@ -191,5 +191,8 @@
   <ItemGroup>
     <Folder Include="resources\videos\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\img\vignere.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

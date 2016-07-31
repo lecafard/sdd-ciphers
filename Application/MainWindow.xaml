@@ -10,9 +10,9 @@
         Title="MainWindow" Height="720" Width="1280">
     <Grid Background="#FF070707">
         <Grid Height="379" HorizontalAlignment="Center" VerticalAlignment="Center" Width="426" Margin="423,165,423,168">
-            <Button x:Name="btnLearn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Content="LEARN ABOUT CIPHERS" HorizontalAlignment="Left" VerticalAlignment="Top" Width="426" Height="120" Background="#FF1ABC9C" Foreground="White" FontSize="34.667" FontFamily="Courier New" FontWeight="Bold"/>
-            <Button x:Name="btnExplore" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Content="EXPLORE CIPHERS" HorizontalAlignment="Stretch" Margin="0,125,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.836,0.667" Height="120" Background="#FF1ABC9C" Foreground="White" FontSize="34.667" FontFamily="Courier New" FontWeight="Bold"/>
-            <Button x:Name="btnPrint" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Content="GOODIES" HorizontalAlignment="Left" Margin="0,249,0,0" VerticalAlignment="Top" Width="426" Height="120" Background="#FF1ABC9C" Foreground="White" FontSize="34.667" FontFamily="Courier New" FontWeight="Bold"/>
+            <Button x:Name="btnLearn" Focusable="False" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Content="LEARN ABOUT CIPHERS" HorizontalAlignment="Left" VerticalAlignment="Top" Width="426" Height="120" Background="#FF1ABC9C" Foreground="White" FontSize="34.667" FontFamily="Courier New" FontWeight="Bold"/>
+            <Button x:Name="btnExplore" Focusable="False"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Content="EXPLORE CIPHERS" HorizontalAlignment="Stretch" Margin="0,125,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.836,0.667" Height="120" Background="#FF1ABC9C" Foreground="White" FontSize="34.667" FontFamily="Courier New" FontWeight="Bold"/>
+            <Button x:Name="btnPrint" Focusable="False"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Content="GOODIES" HorizontalAlignment="Left" Margin="0,249,0,0" VerticalAlignment="Top" Width="426" Height="120" Background="#FF1ABC9C" Foreground="White" FontSize="34.667" FontFamily="Courier New" FontWeight="Bold"/>
 
         </Grid>
         <Label x:Name="label" Content="CIPHERS" HorizontalAlignment="Center" Height="140" Margin="423,0,423,572" VerticalAlignment="Center" Width="426" FontFamily="Courier New" FontSize="96" FontWeight="Bold" Foreground="White"/>
