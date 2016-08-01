@@ -74,11 +74,17 @@
     <Compile Include="PrintWindow.xaml.vb">
       <DependentUpon>PrintWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="resources\explore\ExploreTranspositionWindow.xaml.vb">
+      <DependentUpon>ExploreTranspositionWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="resources\explore\ExploreVignereWindow.xaml.vb">
       <DependentUpon>ExploreVignereWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="resources\explore\ExploreCaesarWindow.xaml.vb">
       <DependentUpon>ExploreCaesarWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="resources\learn\LearnTranspositionWindow.xaml.vb">
+      <DependentUpon>LearnTranspositionWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="resources\learn\LearnVignereWindow.xaml.vb">
       <DependentUpon>LearnVignereWindow.xaml</DependentUpon>
@@ -114,11 +120,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="resources\explore\ExploreTranspositionWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="resources\explore\ExploreVignereWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="resources\explore\ExploreCaesarWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="resources\learn\LearnTranspositionWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
