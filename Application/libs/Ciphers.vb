@@ -70,9 +70,10 @@ Module Ciphers
     End Function
 
     Function ColunmarTranspositionEncrypt(message As String, columns As Integer) As String
-        Dim lengthMessage = Len(message)
         message = Regex.Replace(UCase(message), "[^A-Z]+", String.Empty)
-        message.PadRight(lengthMessage + (columns - (lengthMessage Mod columns)), "E")
+        Dim lengthMessage = Len(message)
+        message = message.PadRight(Math.Ceiling(lengthMessage / columns) * columns, "E")
+        Console.WriteLine(Math.Ceiling(lengthMessage / columns) * columns)
 
         ' recalculate length
         lengthMessage = Len(message)

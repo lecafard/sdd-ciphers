@@ -5,6 +5,7 @@
 
     Dim caesarWindow As LearnCaesarWindow = New LearnCaesarWindow()
     Dim vignereWindow As LearnVignereWindow = New LearnVignereWindow()
+    Dim transpositionWindow As LearnTranspositionWindow = New LearnTranspositionWindow()
 
     Private Sub btns_Hover(sender As Object, e As RoutedEventArgs) Handles btnCaesar.MouseEnter, btnVignere.MouseEnter, btnColumnar.MouseEnter
         Dim btn = DirectCast(sender, Button)
@@ -39,5 +40,13 @@
         End If
         vignereWindow.Show()
         vignereWindow.Activate()
+    End Sub
+
+    Private Sub btnColumnar_Click(sender As Object, e As RoutedEventArgs) Handles btnColumnar.Click
+        If transpositionWindow.isClosed Then
+            transpositionWindow = New LearnTranspositionWindow()
+        End If
+        transpositionWindow.Show()
+        transpositionWindow.Activate()
     End Sub
 End Class

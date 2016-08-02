@@ -79,4 +79,18 @@ Public Class ExploreVignereWindow
 
         End If
     End Sub
+
+    Private Sub txtKey_TextChanged(sender As Object, e As TextChangedEventArgs) Handles txtKey.TextChanged
+        If txtKey.Text = "" Then
+            txtKey.BorderBrush = (New BrushConverter().ConvertFrom("#FFFF0000"))
+
+        Else
+            If keyRegex.IsMatch(txtKey.Text) Then
+                txtKey.BorderBrush = (New BrushConverter().ConvertFrom("#FFFFFFFF"))
+            Else
+                txtKey.BorderBrush = (New BrushConverter().ConvertFrom("#FFFF0000"))
+            End If
+
+        End If
+    End Sub
 End Class

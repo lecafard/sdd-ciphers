@@ -3,6 +3,7 @@
     Dim originalButtonText As String
     Dim caesarWindow = New ExploreCaesarWindow()
     Dim vignereWindow = New ExploreVignereWindow()
+    Dim transpositionWindow = New ExploreTranspositionWindow()
 
     Private Sub btns_Hover(sender As Object, e As RoutedEventArgs) Handles btnCaesar.MouseEnter, btnVignere.MouseEnter, btnColumnar.MouseEnter
         Dim btn = DirectCast(sender, Button)
@@ -37,5 +38,13 @@
         End If
         vignereWindow.Show()
         vignereWindow.Activate()
+    End Sub
+
+    Private Sub btnColumnar_Click(sender As Object, e As RoutedEventArgs) Handles btnColumnar.Click
+        If transpositionWindow.isClosed Then
+            transpositionWindow = New ExploreTranspositionWindow()
+        End If
+        transpositionWindow.Show()
+        transpositionWindow.Activate()
     End Sub
 End Class
